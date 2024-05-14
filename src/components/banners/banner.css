@@ -1,0 +1,36 @@
+.banner-img{
+    height:200px;
+    width:90%;
+    margin:10px;
+}
+
+.banners{
+  
+    display:flex;
+    flex-direction:row;
+    justify-content:space-around;
+}
+
+.BannerSec{
+    margin-top:30px;
+    padding:10px;
+    height:100%;
+    width:100%;
+    background-color:white;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .banners{
+        display:flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items:center;
+    }
+    .banner-img{
+        height:200px;
+        width:90%;
+        margin:10px;
+    }
+    
+}

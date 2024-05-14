@@ -1,0 +1,30 @@
+.searchBar{
+    width:650px;
+    padding:10px;
+    border-top-right-radius:20px;
+}
+.icon{
+    font-size:2em;
+}
+.searchBtn{
+    padding:5px;
+    height:50px;
+    width:50px;
+    position: relative;
+    top:8px;
+    right:40px;
+    border:none;
+    border-radius:50%;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+    .searchBar{
+        display:none;
+    }
+    .searchBtn{
+        display:none;
+    }
+}
+
+
