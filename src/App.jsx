@@ -6,7 +6,6 @@ import BestDealsMobiles from './components/bestdeals(mobiles)/bestdealsmobiles';
 import Banners from './components/banners/banners';
 import Footer from './components/footer/footer';
 import RotateError from './components/rotateerror/rotateerror';
-import Test from './components/test/test';
 
 function App() {
   const [showError, setShowError] = useState(false);
