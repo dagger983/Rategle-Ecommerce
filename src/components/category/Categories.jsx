@@ -1,8 +1,8 @@
 import React from 'react';
-import groceryImage from './assets/grocery.png';
-import mobilesImage from './assets/mobiles.png';
-import fashionImage from './assets/fashion.png';
-import laptopImage from './assets/laptop.png';
+import groceryImage from '../../assets/grocery.png';
+import mobilesImage from '../../assets/mobiles.png';
+import fashionImage from '../../assets/fashion.png';
+import laptopImage from '../../assets/laptop.png';
 import "./Categories.css";
 
 function Category() {
