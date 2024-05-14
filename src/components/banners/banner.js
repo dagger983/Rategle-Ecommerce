@@ -1,20 +1,18 @@
-import banner1 from '../assets/banner1.jpg';
-import banner2 from '../assets/banner2.jpg';
-import banner3 from '../assets/banner3.jpg';
-
 const BannerImg = [
     {
-        id: 1,
-        imageSrc: banner1
+        id:1,
+        imageSrc:"https://res.cloudinary.com/dzmwbkdtr/image/upload/v1715718544/banner1_adok5n.jpg"
     },
     {
-        id: 2,
-        imageSrc: banner2
-    },
-    {
-        id: 3,
-        imageSrc: banner3
+        id:2,
+        imageSrc:"https://res.cloudinary.com/dzmwbkdtr/image/upload/v1715718545/banner2_dzuabw.jpg"
     }
-];
+    ,
+    {
+        id:3,
+        imageSrc:"https://res.cloudinary.com/dzmwbkdtr/image/upload/v1715718544/banner3_u8eakn.jpg"
+    }
+]
 
-export default BannerImg;
+
+export default BannerImg

@@ -8,7 +8,7 @@ function Navbar() {
   return (
     <div className='navbar-main'>
       <div className='navbar'>
-        <img src='./src/assets/flipkart-logo.png' alt='logo' className='logo' />
+        <img src='https://res.cloudinary.com/dzmwbkdtr/image/upload/v1715718549/flipkart-logo_thsshh.png' alt='logo' className='logo' />
         <SearchBar />
         <p className='cart'>Cart <IoCart className='nav-icon' /></p>
         <p className='login'>Login <CgProfile className='nav-icon' /></p>

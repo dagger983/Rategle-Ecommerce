@@ -42,13 +42,13 @@ function CarouselFlipkart(props) {
                 itemClass="carousel-item-padding-40-px"
                 className='carousel-style'
             >
-                <img className='carousel-img' src="./src/assets/carousel1.avif" alt="Image 1" />
-                <img className='carousel-img' src="./src/assets/carousel2.jpg" alt="Image 1" />
+                <img className='carousel-img' src="https://res.cloudinary.com/dzmwbkdtr/image/upload/v1715718544/carousel1_djtdog.jpg" alt="Image 1" />
+                <img className='carousel-img' src="https://res.cloudinary.com/dzmwbkdtr/image/upload/v1715718546/carousel2_mueqjw.jpg" alt="Image 1" />
               
-                <img className='carousel-img' src="./src/assets/carousle3.jpg" alt="Image 1" />
-                <img className='carousel-img' src="./src/assets/carousel4.jpg" alt="Image 1" />
-                <img className='carousel-img' src="./src/assets/carousel5.jpg" alt="Image 1" />
-                <img className='carousel-img' src="./src/assets/carousel6.jpg" alt="Image 1" />
+                <img className='carousel-img' src="https://res.cloudinary.com/dzmwbkdtr/image/upload/v1715718548/carousle3_vgseuz.jpg" alt="Image 1" />
+                <img className='carousel-img' src="https://res.cloudinary.com/dzmwbkdtr/image/upload/v1715718546/carousel4_ruipcg.jpg" alt="Image 1" />
+                <img className='carousel-img' src="https://res.cloudinary.com/dzmwbkdtr/image/upload/v1715718547/carousel5_seb8cj.jpg" alt="Image 1" />
+                <img className='carousel-img' src="https://res.cloudinary.com/dzmwbkdtr/image/upload/v1715718548/carousel6_jwvzek.jpg" alt="Image 1" />
                 
             </Carousel>
             
