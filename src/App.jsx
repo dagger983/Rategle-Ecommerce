@@ -35,7 +35,7 @@ function App() {
       ) : (
         <>
           <Navbar />
-          <Test/>
+         
           <Category />
           <CarouselFlipkart />
           <BestDealsMobiles />
