@@ -36,11 +36,11 @@ function App() {
         <>
           <Navbar />
          
-          <Category />
+          {/* <Category />
           <CarouselFlipkart />
           <BestDealsMobiles />
           <Banners />
-          <Footer />
+          <Footer /> */}
         </>
       )}
     </>
