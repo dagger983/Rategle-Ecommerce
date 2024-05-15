@@ -46,7 +46,11 @@
         top: 8px;
         height: 40px;
     }
-    
+    .searchBtn2{
+        background-color: rgb(13, 107, 249);;
+        color: white;
+        border: none;
+    }
 
     .searchBar2,
     .searchBtn2 {

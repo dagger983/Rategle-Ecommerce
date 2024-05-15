@@ -16,6 +16,8 @@
     border:none;
     border-radius:50%;
     cursor: pointer;
+    background-color: rgb(13, 107, 249);
+    color: white;
 }
 
 @media only screen and (max-width: 768px) {
