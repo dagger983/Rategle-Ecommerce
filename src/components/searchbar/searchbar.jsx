@@ -20,7 +20,7 @@ function SearchBar({ onSearch }) {
       <form className='searchbar-container' onSubmit={handleSubmit}>
         <input
           type="text"
-          placeholder="Search for Products, Brands and More"
+          placeholder="Search for Products . . ."
           className='searchBar'
           value={searchValue}
           onChange={handleChange}
