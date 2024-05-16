@@ -16,8 +16,8 @@ function Navbar({ onSearch }) {
         <img src='https://res.cloudinary.com/dvp17drdy/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1715850120/ratagle_logo_zsspn7.jpg' className='logo'/>
         <SearchBar onSearch={onSearch} onChange={handleChange} />
        
-          <p className='cart'><IoCart className='cart-icon' /></p>
-          <p className='login'><CgProfile className='login-icon' /></p>
+          <p className='cart'>Cart &nbsp;&nbsp;<IoCart className='cart-icon' /></p>
+          <p className='login'>Login &nbsp;&nbsp;<CgProfile className='login-icon' /></p>
         
       </div>
     </div>

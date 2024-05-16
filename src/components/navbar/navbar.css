@@ -29,6 +29,7 @@
   .cart,
   .login {
     margin-left: 10px;
+    cursor: pointer;
   }
   
   .cart-icon,
