@@ -8,18 +8,14 @@ function SearchResult({ searchValue }) {
         return <div className='searchResult'>Please provide a search value</div>;
     }
 
-    // Check if the search value is contained in any product name
-    const nameFilteredProducts = TotalProductsList.filter(product =>
-        product.name.toLowerCase().includes(searchValue.toLowerCase()) 
-    );
+    // Convert searchValue to lowercase for case-insensitive comparison
+    const searchValueLower = searchValue.toLowerCase();
 
-    // Check if the search value is contained in any product category
-    const categoryFilteredProducts = TotalProductsList.filter(product =>
-        product.category.toLowerCase().includes(searchValue.toLowerCase()) 
+    // Filter products based on searchValue
+    const matchingProducts = TotalProductsList.filter(product =>
+        product.name.toLowerCase().includes(searchValueLower) || 
+        product.category.toLowerCase().includes(searchValueLower)
     );
-
-    // Combine both filtered arrays
-    const matchingProducts = [...nameFilteredProducts, ...categoryFilteredProducts];
 
     if (matchingProducts.length === 0) {
         return <div className='searchResult'>No results found for "{searchValue}"</div>;
