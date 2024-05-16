@@ -16,8 +16,8 @@ function Navbar({ onSearch }) {
         <h1 className='logo'>Logo</h1>
         <SearchBar onSearch={onSearch} onChange={handleChange} />
        
-          <p className='cart'>Cart <IoCart className='cart-icon' /></p>
-          <p className='login'>Login <CgProfile className='login-icon' /></p>
+          <p className='cart'><IoCart className='cart-icon' /></p>
+          <p className='login'><CgProfile className='login-icon' /></p>
         
       </div>
     </div>
