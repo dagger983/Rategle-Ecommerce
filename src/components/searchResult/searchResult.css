@@ -1,0 +1,37 @@
+.searchResult {
+    padding: 30px;
+    margin-top: 20px;
+    background-color: white;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.search-product-card {
+    
+    height: 100%;
+    width: 200px;
+    padding:20px;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    margin: 20px;
+    border: 1px solid rgb(131, 131, 131);
+    overflow: hidden;
+    cursor: pointer;
+}
+.search-product-card p{
+    margin-top:10px;
+}
+.search-product-img {
+    height: 100px;
+    margin: 10px;
+    width: auto;
+}
+
+@media screen and (max-width: 768px) {
+    .searchResult {
+       place-items: center;/* Align items vertically for mobile */
+    }
+}

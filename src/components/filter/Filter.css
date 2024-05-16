@@ -1,0 +1,92 @@
+.filter{
+
+    height:100%;
+    width:100%;
+    background-color:white;
+    margin-top:20px;
+    user-select: none;
+    padding:20px;
+}
+.filter-head{
+    padding:10px;
+    text-align:left;
+}
+
+.filter-range{
+   width:100%;
+   position: relative;
+   bottom:10px;
+}
+
+.filter-head2{
+    padding:20px 20px 0px 20px;
+    font-size: large;
+    margin-bottom:10px;
+}
+
+.filter-sec{
+  display:grid;
+  place-items: center;
+}
+
+.filter-range-box{
+    height:30px;
+    width:100%;
+    background-color: rgb(222, 222, 222);
+}
+.filter-round{
+    height:5px;
+    border-radius: 50%;
+    width:5px;
+    background-color:rgb(222, 222, 222);
+}
+.round-filter{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.filter-icon{
+    position: relative;
+    top:3.5px;
+    font-size:20px;
+    cursor: pointer;
+}
+
+.price-range{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+   margin-top:10px;
+}
+.sortBy{
+    padding:30px;
+    display:flex;
+    justify-content: space-between;
+}
+
+.sortBy p {
+    cursor: pointer;
+}
+.line{
+    height:0.1px;
+    width:100%;
+    background-color:black;
+}
+
+@media screen and (max-width:768px) {
+    .filter{
+        float:none;
+        height:100%;
+        width:100%;
+        background-color:white;
+        margin-top:20px;
+        user-select: none;
+        padding:20px;
+    }
+    .filter-range-box{
+        height:30px;
+        width:370px;
+        background-color: rgb(222, 222, 222);
+    }
+}

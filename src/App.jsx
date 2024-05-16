@@ -1,47 +1,46 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Navbar from './components/navbar/navbar';
 import Category from './components/category/Categories';
+import SearchResult from './components/searchResult/seacrhResult';
+import Filter from './components/filter/Filter';
+import Footer from './components/footer/footer';
+import RotateError from './components/rotateerror/rotateerror';
 import CarouselFlipkart from './components/carousel/carousel';
 import BestDealsMobiles from './components/bestdeals(mobiles)/bestdealsmobiles';
 import Banners from './components/banners/banners';
-import Footer from './components/footer/footer';
-import RotateError from './components/rotateerror/rotateerror';
 
 function App() {
   const [showError, setShowError] = useState(false);
+  const [searchValue, setSearchValue] = useState('');
+  const [showSearchResults, setShowSearchResults] = useState(false);
 
-  useEffect(() => {
-    const handleResize = () => {
-      // Check for landscape orientation and small height (assumed for mobile)
-      const isLandscape = window.matchMedia('(orientation: landscape)').matches;
-      const isMobileHeight = window.matchMedia('(max-height: 598px)').matches;
-
-      setShowError(isLandscape && isMobileHeight);
-    };
-
-    window.addEventListener('resize', handleResize);
-    // Initial check on mount
-    handleResize();
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
+  const handleSearch = (value) => {
+    setSearchValue(value);
+    setShowSearchResults(true);
+  };
 
   return (
     <>
       {showError ? (
         <RotateError />
       ) : (
-        <>
-          <Navbar />
-         
-          {/* <Category />
-          <CarouselFlipkart />
-          <BestDealsMobiles />
-          <Banners />
-          <Footer /> */}
-        </>
+        <div>
+          <Navbar onSearch={handleSearch} />
+          <Category />
+          {showSearchResults ? (
+            <>
+              <Filter />
+              <SearchResult searchValue={searchValue} />
+            </>
+          ) : (
+            <>
+              <CarouselFlipkart />
+              <BestDealsMobiles />
+              <Banners />
+            </>
+          )}
+          <Footer />
+        </div>
       )}
     </>
   );

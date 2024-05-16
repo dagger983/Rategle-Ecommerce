@@ -1,74 +1,58 @@
 .navbar {
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    align-items: center;
     padding: 10px;
-}
-
-.navbar-main {
+  }
+  
+  .navbar-main {
     background-color: rgb(255, 255, 255);
     position: sticky;
     top: 0;
     z-index: 3000;
-}
-
-.logo {
-    position: relative;
-    top: 2px;
-    height: 60px;
+  }
+  
+  .logo {
+    margin: 0;
+    padding: 0;
     cursor: pointer;
-}
-
-.login,
-.cart {
-    position: relative;
-    top: 8px;
-    cursor: pointer;
-}
-
-.nav-icon {
+  }
+  
+  .navbar-icons {
+    display: flex;
+  }
+  
+  .cart,
+  .login {
+    margin-left: 10px;
+  }
+  
+  .cart-icon,
+  .login-icon {
     font-size: 1.5em;
+    color: rgb(13, 107, 249);
     position: relative;
-    top: 8px;
-   color: rgb(13, 107, 249)
-}
-
-.searchBar2 {
-    display: none;
-}
-
-.searchBtn2 {
-    display: none;
-}
-
-@media only screen and (max-width: 768px) {
+    top:6px;
+  }
+  
+  @media only screen and (max-width: 768px) {
     .logo {
-        position: relative;
-        top: 8px;
-        height: 40px;
+      font-size: 1.2em;
     }
-    .searchBtn2{
-        background-color: rgb(13, 107, 249);;
-        color: white;
-        border: none;
+  
+    .navbar {
+      flex-direction: row;
+      padding: 10px 0;
     }
-
-    .searchBar2,
-    .searchBtn2 {
-        display: inline-block;
-        padding: 5px;
-        height: 40px;
+  
+    .navbar-icons {
+      margin-top: 10px;
     }
-
-    .navbar-search {
-        display: flex;
-        justify-content: center;
-        padding: 30px;
+  
+    .cart,
+    .login {
+      margin-left: 0;
+      margin-right: 10px;
     }
-
-    .navbar-main {
-        position: sticky;
-        top: 0;
-        z-index: 3000;
-    }
-}
+  }
+  
