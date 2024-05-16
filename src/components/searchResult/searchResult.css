@@ -29,6 +29,9 @@
     margin: 10px;
     width: auto;
 }
+.search-product-name,.search-product-price{
+    color:black;
+}
 
 @media screen and (max-width: 768px) {
     .searchResult {

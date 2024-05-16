@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import "./searchResult.css";
 import TotalProductsList from "../../assets/TotalProductsList"; 
 
@@ -25,11 +26,13 @@ function SearchResult({ searchValue }) {
         <div className='searchResult'>
             <p className='result-text'>Results for: {searchValue} and Totally {matchingProducts.length} results</p>
             {matchingProducts.map(product => (
-                <div className='search-product-card' key={product.id}>
-                    <img src={product.imageUrl} className='search-product-img' alt={product.name} />
-                    <p>{product.name}</p>
-                    <p>Price: {product.price}</p>
-                </div>
+                <Link to={`/product/${product.id}`} key={product.id} className='search-product-link'>
+                    <div className='search-product-card'>
+                        <img src={product.imageUrl} className='search-product-img' alt={product.name} />
+                        <p className='search-product-name'>{product.name}</p>
+                        <p className="search-product-price">Price: {product.price}</p>
+                    </div>
+                </Link>
             ))}
         </div>
     );
