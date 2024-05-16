@@ -48,7 +48,10 @@
     .ProductView{
         flex-direction:column;
     }
-    .product-description h2,h3,li{
+    .ProductViewImg{
+        height:100%;
+    }
+    .product-description h1,h2,h3,li{
         text-align: center;
         margin-top:20px;
         margin-bottom:20px;
@@ -60,5 +63,9 @@
     }
     .ProductViewMain{
         height:100%;
+    }
+    .product-btn,.product-btn2{
+        position: relative;
+        left:30px;
     }
 }

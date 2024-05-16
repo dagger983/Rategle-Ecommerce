@@ -19,7 +19,7 @@ function ProductView() {
 
   return (
     <div className='ProductViewMain'>
-      <h4 className='ProductViewHead'>Product-Category : {product.category}</h4>
+      <h4 className='ProductViewHead'>Product-Category &nbsp; &gt;  &nbsp; {product.category} &nbsp; &gt;  &nbsp; {product.name}</h4>
       <div className='ProductView'>
         <Carousel showArrows={true} showThumbs={false}>
           <img src={product.imageUrl} alt={product.name} className="ProductViewImg" />
