@@ -13,12 +13,4 @@ body{
   background-color: rgb(220, 220, 221);
 }
 
-a:active{
-  color:rgb(255, 255, 255);
-}
-a:hover{
-  color:rgb(255, 255, 255);
-}
-a{
-  color:rgb(255, 255, 255);
-}
+

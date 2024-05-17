@@ -21,18 +21,20 @@ function CartPage({ removeFromCart }) {
   };
 
   return (
-    <div>
+    <div className='cartPage'>
       <h1>Cart</h1>
       {cartItems.length === 0 ? (
-        <p>Your cart is empty.</p>
+        <p className='err-cart'>Your cart is empty.</p>
       ) : (
         <ul>
           {cartItems.map((item, index) => (
             <li className='cart-product-container' key={index}>
               <Link to={`/product/${item.id}`} key={item.id}>
-                <img src={item.imageUrl} alt={item.name} style={{ width: '100px', height: '100px', marginRight: '10px' }} />
-                <p>{item.name} - {item.price} </p>
+                <img src={item.imageUrl} alt={item.name} />
+                
               </Link>
+              <p>{item.name}</p>
+              <p>{item.price}</p>
               <button onClick={() => handleRemoveFromCart(item)}>Remove</button>
             </li>
           ))}

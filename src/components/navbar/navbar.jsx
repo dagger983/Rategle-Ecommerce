@@ -14,8 +14,8 @@ function Navbar({ onSearch }) {
         </Link>
         <SearchBar onSearch={onSearch} />
         <div className="navbar-icons">
-          {/* Link to CartPage when cart icon is clicked */}
-          <Link to="/cart" className='cart'><IoCart className='cart-icon' /></Link>
+         
+          <Link to="/cart" className='cart'>Cart &nbsp;<IoCart className='cart-icon' /></Link>
           <p className='login'>Login &nbsp;<CgProfile className='login-icon' /></p>
         </div>
       </div>
