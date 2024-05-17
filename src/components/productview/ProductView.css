@@ -2,8 +2,11 @@
     height:100%;
     width:100%;
     background-color:white;
-    margin-top:30px;
     padding:30px;
+}
+.productView-logo{
+    height:80px;
+    margin-bottom:30px;
 }
 .ProductView{
     display:flex;
