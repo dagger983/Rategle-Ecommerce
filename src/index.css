@@ -6,7 +6,6 @@
   font-family:"Outfit";
   font-weight: 500;
   text-decoration: none;
-  user-select: none;
 
 }
 body{
@@ -14,3 +13,6 @@ body{
 }
 
 
+Link{
+  color:black;
+}

@@ -11,7 +11,10 @@ import Banners from './components/banners/banners';
 import Filter from "./components/filter/Filter";
 import Footer from './components/footer/footer';
 import CartPage from './components/cartPage/CartPage';
-
+import Grocery from './components/category/grocery/grocery';
+import HomeAppliances from './components/category/home_appliances/home_appliances';
+import Fashion from './components/category/fashion/fashion';
+import Electronics from './components/category/electronics/electronics';
 function App() {
     const [searchValue, setSearchValue] = useState('');
     const [selectedProduct, setSelectedProduct] = useState(null);
@@ -50,15 +53,15 @@ function App() {
     };
 
     const addToCart = (product) => {
-        // Check if the product is already in the cart
+       
         const isProductInCart = cartItems.some(item => item.id === product.id);
-        // If not already in cart, add it
+        
         if (!isProductInCart) {
             setCartItems([...cartItems, product]);
-            // Show an alert to notify the user that the product is added to the cart
+       
             alert(`${product.name} added to cart!`);
         } else {
-            // Optionally, you can provide feedback to the user that the product is already in the cart
+           
             console.log("Product is already in the cart!");
         }
     };
@@ -72,7 +75,7 @@ function App() {
     return (
         <div>
             {showNavbarAndCategory && <Navbar onSearch={handleSearch} />}
-            {showNavbarAndCategory && <Category />} {/* Render category component here */}
+            {showNavbarAndCategory && <Category />} 
             <Routes>
                 <Route path="/" element={
                     <>
@@ -96,8 +99,13 @@ function App() {
                         )}
                     </>
                 } />
-                <Route path="/product/:id" element={<ProductView products={TotalProductsList} cartItems={cartItems} addToCart={addToCart} />} />
+                <Route path="/category/:id" element={<ProductView products={TotalProductsList} cartItems={cartItems} addToCart={addToCart} />} />
                 <Route path="/cart" element={<CartPage cartItems={cartItems} removeFromCart={removeFromCart} />} />
+                <Route path="/category/grocery" element={<Grocery/>} />
+                <Route path="/category/homeappliances" element={<HomeAppliances/>} />
+                <Route path="/category/fashion" element={<Fashion/>} />
+                <Route path="/category/electronics" element={<Electronics/>} />
+                
             </Routes>
             {showNavbarAndCategory && <Footer />}
         </div>

@@ -28,7 +28,7 @@ const BestDealsMobiles = () => {
             >
 
                 {products.map(product => (
-                    <Link to={`/product/${product.id}`} key={product.id} className='search-product-link'>
+                    <Link to={`/category/${product.id}`} key={product.id} className='search-product-link'>
                     <div className='carousel-card' key={product.id}>
                         <img src={product.imageUrl} className="bestdeal-img" alt={product.name} /> <br />
                         <h3>{product.name}</h3> <br />

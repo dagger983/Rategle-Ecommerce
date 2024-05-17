@@ -66,5 +66,8 @@
       margin-left: 0;
       margin-right: 10px;
     }
+    .navbar-icons span{
+      display: none;
+    }
   }
   

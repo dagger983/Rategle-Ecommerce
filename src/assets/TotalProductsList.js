@@ -19,7 +19,7 @@ const TotalProductsList = [
         "id": 3,
         "name": "Nike Running Shoes",
         "price": "₹ 599",
-        "category": "Sports",
+        "category": "Fashion",
         "imageUrl": "https://m.media-amazon.com/images/I/614aiM56siL._SL1500_.jpg",
         "description": "Hit the track with confidence in Nike Running Shoes, Designed for comfort and performance, These lightweight shoes feature breathable mesh uppers, responsive cushioning and durable rubber outsoles for superior traction."
     },
@@ -78,6 +78,30 @@ const TotalProductsList = [
         "category": "Electronics",
         "imageUrl": "https://res.cloudinary.com/dzmwbkdtr/image/upload/v1715718549/motorolaedge40neo_pfalra.jpg",
         "description": "Stay connected and productive with the Motorola Edge 40 Neo 5G, Featuring 8GB RAM 128GB ROM, a 16.51 cm (6.5 inch) HD+ display, a 50MP + 2MP rear camera, a 16MP front camera, a 5000mAh battery, Snapdragon 695 5G processor, and a stylish vegan leather design."
+    },
+    {
+        "id": 11,
+        "name": "Levi's Men's 511 Slim Fit Jeans",
+        "price": "₹ 2,999",
+        "category": "Fashion",
+        "imageUrl": "https://levi.in/cdn/shop/files/182981393_02_Front_cf51fd0b-7e14-4999-b87a-84b91cceb5cc.jpg?v=1712742742&width=1445",
+        "description": "Upgrade your wardrobe with Levi's Men's 511 Slim Fit Jeans, These jeans feature a modern slim fit through the thigh, And leg for a stylish look that's perfect for any occasion."
+    },
+    {
+        "id": 12,
+        "name": "Organic Quinoa Grain",
+        "price": "₹ 399",
+        "category": "Grocery",
+        "imageUrl": "https://images-cdn.ubuy.co.in/6453bd0e720f9a126e60d8b5-wellsley-farms-organic-quinoa-3lb-100.jpg",
+        "description": "Enjoy the nutritional benefits of organic quinoa grain, Packed with protein | fiber and essential nutrients, it's a versatile ingredient for salads | soups and more."
+    },
+    {
+        "id": 13,
+        "name": "Dyson V11 Absolute Pro Cord-Free Vacuum",
+        "price": "₹ 52,990",
+        "category": "HomeAppliances",
+        "imageUrl": "https://m.media-amazon.com/images/I/418vSp+SqzL.jpg",
+        "description": "Make cleaning easier with the Dyson V11 Absolute Pro Cord-Free Vacuum, With powerful suction and a range of attachments, It can tackle dirt and debris on any surface."
     }
 ];
 

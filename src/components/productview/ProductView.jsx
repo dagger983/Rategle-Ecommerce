@@ -14,13 +14,12 @@ function ProductView({ addToCart, cartItems }) {
 
   const handleAddToCart = (productId) => {
     if (!cartItems.some(item => item.id === productId)) {
-      addToCart(TotalProductsList.find(item => item.id === productId)); // Add the product to the cart
-      setAddedToCartMap(prevState => ({ ...prevState, [productId]: true })); // Update the state to indicate that the product has been added to the cart
+      addToCart(TotalProductsList.find(item => item.id === productId)); 
+      setAddedToCartMap(prevState => ({ ...prevState, [productId]: true }));
     }
   };
 
   if (!product) {
-    // Product not found
     return (
       <div className='ProductViewMain'>
         <h4 className='ProductViewHead'>Product Not Found</h4>
@@ -29,7 +28,6 @@ function ProductView({ addToCart, cartItems }) {
     );
   }
 
-  // Limit the similarProducts array to only show up to 4 products
   similarProducts = similarProducts.slice(0, 4);
 
   return (
@@ -66,7 +64,7 @@ function ProductView({ addToCart, cartItems }) {
           <h3>Similar Products</h3>
           <div className="similar-products-container">
             {similarProducts.map((item) => (
-              <Link to={`/product/${item.id}`} key={item.id}>
+              <Link to={`/category/${item.id}`} key={item.id}>
                 <div className="similar-product-card">
                   <img src={item.imageUrl} className='similar-img' alt={item.name} />
                   <h4>{item.name}</h4>

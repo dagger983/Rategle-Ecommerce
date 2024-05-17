@@ -15,8 +15,8 @@ function Navbar({ onSearch }) {
         <SearchBar onSearch={onSearch} />
         <div className="navbar-icons">
          
-          <Link to="/cart" className='cart'>Cart &nbsp;<IoCart className='cart-icon' /></Link>
-          <p className='login'>Login &nbsp;<CgProfile className='login-icon' /></p>
+          <Link to="/cart" className='cart'><span>Cart</span><IoCart className='cart-icon' /></Link>
+          <p className='login'><span>Login</span><CgProfile className='login-icon' /></p>
         </div>
       </div>
     </div>

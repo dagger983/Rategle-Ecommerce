@@ -43,7 +43,7 @@ function SearchResult({ searchValue, sortType }) {
         <div className='searchResult'>
             <p className='result-text'>Results for: {searchValue} and Totally {filteredProducts.length} results</p>
             {filteredProducts.map(product => (
-                <Link to={`/product/${product.id}`} key={product.id} className='search-product-link'>
+                <Link to={`/category/${product.id}`} key={product.id} className='search-product-link'>
                     <div className='search-product-card'>
                         <img src={product.imageUrl} className='search-product-img' alt={product.name} />
                         <p className='search-product-name'>{product.name}</p>
