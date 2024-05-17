@@ -25,8 +25,20 @@
 }
 
 .filter-sec{
-  display:grid;
-  place-items: center;
+  display:flex;
+  flex-direction: row;
+ justify-content: space-evenly;
+ position: relative;
+ top:20px;
+}
+.filter-sec button{
+    height:35px;
+    border:0;
+    width:120px;
+    margin:5px;
+    background-color: rgb(0, 85, 255);
+    color:white;
+    cursor: pointer;
 }
 
 .filter-range-box{

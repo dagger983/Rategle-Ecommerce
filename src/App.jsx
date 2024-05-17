@@ -4,7 +4,7 @@ import Navbar from './components/navbar/navbar';
 import Category from './components/category/Categories';
 import SearchResult from "./components/searchResult/seacrhResult";
 import ProductView from './components/productview/ProductView';
-import TotalProductsList from './assets/TotalProductsList'; // Import the product list
+import TotalProductsList from './assets/TotalProductsList'; // பொருள் பட்டியலை இறக்குமதி செய்க
 import CarouselFlipkart from './components/carousel/carousel';
 import BestDealsMobiles from './components/bestdeals(mobiles)/bestdealsmobiles';
 import Banners from './components/banners/banners';
@@ -15,22 +15,23 @@ function App() {
     const [searchValue, setSearchValue] = useState('');
     const [selectedProduct, setSelectedProduct] = useState(null);
     const [showSearchResults, setShowSearchResults] = useState(false);
-    const [filter, setFilter] = useState({ priceRange: [0, 10000] }); // Initial filter state
+    const [filter, setFilter] = useState({ priceRange: [0, 10000], sortType: '' }); // அடிப்படையான வகை இருப்பு
 
     const handleSearch = (value) => {
         setSearchValue(value);
         setShowSearchResults(true);
-        setSelectedProduct(null); // Reset selected product when performing a new search
+        setSelectedProduct(null); 
+        setFilter(prevFilter => ({ ...prevFilter, sortType: '' }));
+    };
+
+    const handleProductClick = (productId) => {
+       
+        const product = TotalProductsList.find(product => product.id === productId);
+        setSelectedProduct(product);
     };
 
     const handleFilterChange = (newFilter) => {
         setFilter({ ...filter, ...newFilter });
-    };
-
-    const handleProductClick = (productId) => {
-        // Find the selected product from the product list
-        const product = TotalProductsList.find(product => product.id === productId);
-        setSelectedProduct(product);
     };
 
     return (
@@ -45,6 +46,7 @@ function App() {
                                 <Filter onFilterChange={handleFilterChange} />
                                 <SearchResult 
                                     searchValue={searchValue} 
+                                    sortType={filter.sortType} // வகை தேடலுக்கு செல்லும் மாதிரி
                                     products={TotalProductsList} 
                                     filter={filter} 
                                     onProductClick={handleProductClick} 
