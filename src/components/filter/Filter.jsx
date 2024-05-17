@@ -26,9 +26,9 @@ function Filter({ onFilterChange }) {
                     <br />
                     <hr />
                     <div className='filter-sec'>
-                        <button onClick={() => handleSort('lowToHigh')}>Price: Low to High</button>
-                        <button onClick={() => handleSort('highToLow')}>Price: High to Low</button>
-                        <button onClick={() => handleSort('random')}>Price: Random</button>
+                        <button onClick={() => handleSort('lowToHigh')}>Low Price Products</button>
+                        <button onClick={() => handleSort('highToLow')}>High Price Products</button>
+                        <button onClick={() => handleSort('random')}>Random Price</button>
                     </div>
                     <br />
                     <br />
