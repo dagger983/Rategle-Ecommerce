@@ -2,10 +2,10 @@ const TotalProductsList = [
     {
         "id": 1,
         "name": "HP Victus Gaming Laptop",
-        "price": "₹ 1,04,999",
+        "price": "₹ 104,999",
         "category": "Electronics",
         "imageUrl": "https://in-media.apjonlinecdn.com/catalog/product/cache/b3b166914d87ce343d4dc5ec5117b502/c/0/c08192495_6_1.png",
-        "description": "Experience immersive gaming with the HP Victus Gaming Laptop, Featuring a powerful Intel Core i7 processor, NVIDIA GeForce RTX graphics, 16GB DDR4 RAM, and 512GB SSD storage, it delivers smooth performance and stunning graphics."
+        "description": "Experience immersive gaming with the HP Victus Gaming Laptop, Featuring a powerful Intel Core i7 processor, NVIDIA GeForce RTX graphics, 16GB DDR4 RAM and 512GB SSD storage, it delivers smooth performance and stunning graphics."
     },
     {
         "id": 2,
@@ -13,7 +13,7 @@ const TotalProductsList = [
         "price": "₹ 74,990",
         "category": "Electronics",
         "imageUrl": "https://m.media-amazon.com/images/I/61Qe0euJJZL.jpg",
-        "description": "Enhance your productivity with the Microsoft Laptop 4, With its high-resolution PixelSense touchscreen display, Intel Core i5 processor, 8GB RAM, and 256GB SSD storage, it offers a seamless computing experience for work and entertainment."
+        "description": "Enhance your productivity with the Microsoft Laptop 4, With its high-resolution PixelSense touchscreen display, Intel Core i5 processor, 8GB RAM and 256GB SSD storage, it offers a seamless computing experience for work and entertainment."
     },
     {
         "id": 3,
@@ -21,7 +21,7 @@ const TotalProductsList = [
         "price": "₹ 599",
         "category": "Sports",
         "imageUrl": "https://m.media-amazon.com/images/I/614aiM56siL._SL1500_.jpg",
-        "description": "Hit the track with confidence in Nike Running Shoes, Designed for comfort and performance, these lightweight shoes feature breathable mesh uppers, responsive cushioning, and durable rubber outsoles for superior traction."
+        "description": "Hit the track with confidence in Nike Running Shoes, Designed for comfort and performance, These lightweight shoes feature breathable mesh uppers, responsive cushioning and durable rubber outsoles for superior traction."
     },
     {
         "id": 4,

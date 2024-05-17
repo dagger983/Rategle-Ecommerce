@@ -12,48 +12,58 @@ import Filter from "./components/filter/Filter";
 import Footer from './components/footer/footer';
 
 function App() {
-  const [searchValue, setSearchValue] = useState('');
-  const [selectedProduct, setSelectedProduct] = useState(null);
-  const [showSearchResults, setShowSearchResults] = useState(false);
+    const [searchValue, setSearchValue] = useState('');
+    const [selectedProduct, setSelectedProduct] = useState(null);
+    const [showSearchResults, setShowSearchResults] = useState(false);
+    const [filter, setFilter] = useState({ priceRange: [0, 10000] }); // Initial filter state
 
-  const handleSearch = (value) => {
-    setSearchValue(value);
-    setShowSearchResults(true);
-    setSelectedProduct(null); // Reset selected product when performing a new search
-  };
+    const handleSearch = (value) => {
+        setSearchValue(value);
+        setShowSearchResults(true);
+        setSelectedProduct(null); // Reset selected product when performing a new search
+    };
 
-  const handleProductClick = (productId) => {
-    // Find the selected product from the product list
-    const product = TotalProductsList.find(product => product.id === productId);
-    setSelectedProduct(product);
-  };
+    const handleFilterChange = (newFilter) => {
+        setFilter({ ...filter, ...newFilter });
+    };
 
-  return (
-    <div>
-      <Navbar onSearch={handleSearch} />
-      <Category />
-      <Routes>
-        <Route path="/" element={
-          <>
-            {showSearchResults ? (
-              <>
-                <Filter />
-                <SearchResult searchValue={searchValue} products={TotalProductsList} onProductClick={handleProductClick} />
-              </>
-            ) : (
-              <>
-                <CarouselFlipkart />
-                <BestDealsMobiles />
-                <Banners />
-              </>
-            )}
-          </>
-        } />
-        <Route path="/product/:id" element={<ProductView products={TotalProductsList} />} />
-      </Routes>
-      <Footer />
-    </div>
-  );
+    const handleProductClick = (productId) => {
+        // Find the selected product from the product list
+        const product = TotalProductsList.find(product => product.id === productId);
+        setSelectedProduct(product);
+    };
+
+    return (
+        <div>
+            <Navbar onSearch={handleSearch} />
+            <Category />
+            <Routes>
+                <Route path="/" element={
+                    <>
+                        {showSearchResults ? (
+                            <>
+                                <Filter onFilterChange={handleFilterChange} />
+                                <SearchResult 
+                                    searchValue={searchValue} 
+                                    products={TotalProductsList} 
+                                    filter={filter} 
+                                    onProductClick={handleProductClick} 
+                                />
+                            </>
+                        ) : (
+                            <>
+                                <CarouselFlipkart />
+                                <BestDealsMobiles />
+                                <Banners />
+                            </>
+                        )}
+                    </>
+                } />
+                <Route path="/product/:id" element={<ProductView products={TotalProductsList} />} />
+            </Routes>
+            <Footer />
+        </div>
+    );
 }
 
 export default App;
