@@ -62,9 +62,15 @@
 .similar-product-card p{
     margin-top:20px;
 }
+
 @media screen and (max-width:768px) {
     .ProductView{
         flex-direction:column;
+    }
+    .product-btn-main{
+        display:flex;
+        justify-content: center;
+        
     }
     .ProductViewImg{
         height:100%;
@@ -82,10 +88,7 @@
     .ProductViewMain{
         height:100%;
     }
-    .product-btn,.product-btn2{
-        position: relative;
-        left:30px;
-    }
+    
     .similar-products-container{
      align-items: center;
         flex-direction:column;

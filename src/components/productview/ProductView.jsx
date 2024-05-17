@@ -39,8 +39,11 @@ function ProductView() {
               <li key={index}>{item.trim()}</li>
             ))}
           </ul>
+          <div className='product-btn-main'>
           <button className='product-btn'>Add To Cart</button>
           <button className='product-btn2'>Buy Now</button>
+          </div>
+          
         </div>
       </div>
       {similarProducts.length > 0 && (
