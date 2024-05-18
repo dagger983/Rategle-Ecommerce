@@ -15,10 +15,10 @@ import Grocery from './components/category/grocery/grocery';
 import HomeAppliances from './components/category/home_appliances/home_appliances';
 import Fashion from './components/category/fashion/fashion';
 import Electronics from './components/category/electronics/electronics';
+
 function App() {
     const [searchValue, setSearchValue] = useState('');
     const [selectedProduct, setSelectedProduct] = useState(null);
-    const [showSearchResults, setShowSearchResults] = useState(false);
     const [filter, setFilter] = useState({ priceRange: [0, 10000], sortType: '' });
     const [cartItems, setCartItems] = useState([]);
     const location = useLocation();
@@ -38,7 +38,6 @@ function App() {
 
     const handleSearch = (value) => {
         setSearchValue(value);
-        setShowSearchResults(true);
         setSelectedProduct(null);
         setFilter(prevFilter => ({ ...prevFilter, sortType: '' }));
     };
@@ -53,15 +52,12 @@ function App() {
     };
 
     const addToCart = (product) => {
-       
         const isProductInCart = cartItems.some(item => item.id === product.id);
         
         if (!isProductInCart) {
             setCartItems([...cartItems, product]);
-       
             alert(`${product.name} added to cart!`);
         } else {
-           
             console.log("Product is already in the cart!");
         }
     };
@@ -70,16 +66,17 @@ function App() {
         setCartItems(cartItems.filter(item => item.id !== productToRemove.id));
     };
 
-    const showNavbarAndCategory = !location.pathname.startsWith("/product");
+    const showSearchResultsComponent = searchValue !== '';
+    const isProductView = location.pathname.startsWith('/category');
 
     return (
         <div>
-            {showNavbarAndCategory && <Navbar onSearch={handleSearch} />}
-            {showNavbarAndCategory && <Category />} 
+            {!isProductView && <Navbar onSearch={handleSearch} />}
+            <Category /> 
             <Routes>
                 <Route path="/" element={
                     <>
-                        {!showSearchResults ? (
+                        {!showSearchResultsComponent ? (
                             <>
                                 <CarouselFlipkart />
                                 <BestDealsMobiles />
@@ -105,9 +102,8 @@ function App() {
                 <Route path="/category/homeappliances" element={<HomeAppliances/>} />
                 <Route path="/category/fashion" element={<Fashion/>} />
                 <Route path="/category/electronics" element={<Electronics/>} />
-                
             </Routes>
-            {showNavbarAndCategory && <Footer />}
+            <Footer />
         </div>
     );
 }
