@@ -15,6 +15,8 @@ import Grocery from './components/category/grocery/grocery';
 import HomeAppliances from './components/category/home_appliances/home_appliances';
 import Fashion from './components/category/fashion/fashion';
 import Electronics from './components/category/electronics/electronics';
+import Login from './components/login/Login';
+import Register from './components/login/Register';
 
 function App() {
     const [searchValue, setSearchValue] = useState('');
@@ -53,7 +55,7 @@ function App() {
 
     const addToCart = (product) => {
         const isProductInCart = cartItems.some(item => item.id === product.id);
-        
+
         if (!isProductInCart) {
             setCartItems([...cartItems, product]);
             alert(`${product.name} added to cart!`);
@@ -68,21 +70,24 @@ function App() {
 
     const showSearchResultsComponent = searchValue !== '';
     const isProductView = location.pathname.startsWith('/category');
+    const isLoginPage = location.pathname === '/category/login';
+    const isRegisterPage = location.pathname === '/category/register';
 
     return (
         <div>
-            {!isProductView && <Navbar onSearch={handleSearch} />}
-            <Category /> 
+            {!isLoginPage && !isRegisterPage && !isProductView && <Navbar onSearch={handleSearch} />}
+            {!isLoginPage && !isRegisterPage && <Category />}
             <Routes>
                 <Route path="/" element={
                     <>
-                        {!showSearchResultsComponent ? (
+                        {!showSearchResultsComponent && !isLoginPage && !isRegisterPage && (
                             <>
                                 <CarouselFlipkart />
                                 <BestDealsMobiles />
                                 <Banners />
                             </>
-                        ) : (
+                        )}
+                        {showSearchResultsComponent && !isLoginPage && !isRegisterPage && (
                             <>
                                 <Filter onFilterChange={handleFilterChange} />
                                 <SearchResult
@@ -94,16 +99,20 @@ function App() {
                                 />
                             </>
                         )}
+                        {isLoginPage && <Login />}
+                        {isRegisterPage && <Register />}
                     </>
                 } />
                 <Route path="/category/:id" element={<ProductView products={TotalProductsList} cartItems={cartItems} addToCart={addToCart} />} />
-                <Route path="/cart" element={<CartPage cartItems={cartItems} removeFromCart={removeFromCart} />} />
-                <Route path="/category/grocery" element={<Grocery/>} />
-                <Route path="/category/homeappliances" element={<HomeAppliances/>} />
-                <Route path="/category/fashion" element={<Fashion/>} />
-                <Route path="/category/electronics" element={<Electronics/>} />
+                <Route path="/category/cart" element={<CartPage cartItems={cartItems} removeFromCart={removeFromCart} />} />
+                <Route path="/category/grocery" element={<Grocery />} />
+                <Route path="/category/homeappliances" element={<HomeAppliances />} />
+                <Route path="/category/fashion" element={<Fashion />} />
+                <Route path="/category/electronics" element={<Electronics />} />
+                <Route path="/category/register" element={<Register />} />
+                <Route path="/category/login" element={<Login />} />
             </Routes>
-            <Footer />
+         <Footer />
         </div>
     );
 }

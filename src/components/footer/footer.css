@@ -1,19 +1,18 @@
 footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
     background-color: rgb(33, 33, 33);
     color: white;
     font-weight: 100;
     padding: 20px;
     text-align: center;
-}
-
-.phone-num:active {
+  }
+  
+  .phone-num:active,
+  .phone-num:hover,
+  .phone-num {
     color: rgb(255, 255, 255);
-}
-
-.phone-num:hover {
-    color: rgb(255, 255, 255);
-}
-
-.phone-num{
-    color: rgb(255, 255, 255);
-}
+  }
+  
