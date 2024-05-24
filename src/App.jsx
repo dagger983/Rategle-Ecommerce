@@ -116,12 +116,7 @@ function App() {
 
                 <Route path="/admin" element={<Admin />} />
             </Routes>
-       
-         
-
-         
          <Footer />
-
         </div>
     );
 }
