@@ -26,6 +26,9 @@
   .navbar-icons {
     display: flex;
   }
+  .navbar-icons p {
+    cursor: pointer;
+  }
   
   .cart,
   .login {
