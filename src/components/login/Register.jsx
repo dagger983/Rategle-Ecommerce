@@ -1,18 +1,9 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import Cookies from 'js-cookie';
-import { FaEye, FaEyeSlash } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
-import { ClipLoader } from 'react-spinners';
-import './Login.css';
-
-const API_URL = 'https://rategle-login-register-db.onrender.com';
-=======
-import React, { useState } from 'react';
+import axios from 'axios'; // Import axios for making HTTP requests
+import Cookies from 'js-cookie'; // Import Cookies for managing cookies
 import { FaEye, FaEyeSlash } from 'react-icons/fa'; // Import eye icons
+import { ClipLoader } from 'react-spinners'; // Import ClipLoader for loading spinner
 import './Login.css'; // Import your CSS file
->>>>>>> d689d1f2a52dbf955f9fea358eba07b107690024
 
 const Register = () => {
   const [email, setEmail] = useState('');
@@ -20,11 +11,11 @@ const Register = () => {
   const [confirmPassword, setConfirmPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
-<<<<<<< HEAD
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
-
+  const API_URL = 'https://rategle-login-register-db.onrender.com';
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
@@ -49,25 +40,12 @@ const Register = () => {
     }
   }, [success]);
 
-=======
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Handle form submission logic here, like sending data to a server
-    console.log('Submitted:', { email, password, confirmPassword });
-  };
-
->>>>>>> d689d1f2a52dbf955f9fea358eba07b107690024
   return (
     <div className='login-container-main'>
       <div className="login-container">
         <form className="login-form" onSubmit={handleSubmit}>
           <h2>Register</h2>
-<<<<<<< HEAD
-          <div className="form-group">
-=======
-          <div className="form-group" style={{color:"white"}}>
->>>>>>> d689d1f2a52dbf955f9fea358eba07b107690024
+          <div className="form-group" style={{color:"black"}}>
             <label htmlFor="email">Email:</label>
             <input
               type="email"
@@ -77,11 +55,7 @@ const Register = () => {
               required
             />
           </div>
-<<<<<<< HEAD
-          <div className="form-group">
-=======
-          <div className="form-group" style={{color:"white"}}>
->>>>>>> d689d1f2a52dbf955f9fea358eba07b107690024
+          <div className="form-group" style={{color:"black"}}>
             <label htmlFor="password">Password:</label>
             <div className="password-input-container">
               <input
@@ -104,11 +78,7 @@ const Register = () => {
               )}
             </div>
           </div>
-<<<<<<< HEAD
-          <div className="form-group">
-=======
-          <div className="form-group" style={{color:"white"}}>
->>>>>>> d689d1f2a52dbf955f9fea358eba07b107690024
+          <div className="form-group" style={{color:"black"}}>
             <label htmlFor="confirmPassword">Confirm Password:</label>
             <div className="password-input-container">
               <input
@@ -131,7 +101,6 @@ const Register = () => {
               )}
             </div>
           </div>
-<<<<<<< HEAD
           {error && <p className="error-message">{error}</p>} {/* Display error message if registration fails */}
           <button className='Login-btn' type="submit">Register</button>
         </form>
@@ -141,11 +110,6 @@ const Register = () => {
           <ClipLoader color={'#123abc'} loading={loading} size={150} />
         </div>
       )}
-=======
-          <button className='Login-btn' type="submit">Register</button>
-        </form>
-      </div>
->>>>>>> d689d1f2a52dbf955f9fea358eba07b107690024
     </div>
   );
 };

@@ -64,10 +64,10 @@
       margin-top: 10px;
     }
   
-    .cart,
+    .home,.cart,
     .login {
       margin-left: 0;
-      margin-right: 10px;
+     margin-right:5px;
     }
     .navbar-icons span{
       display: none;

@@ -17,10 +17,8 @@ import Fashion from './components/category/fashion/fashion';
 import Electronics from './components/category/electronics/electronics';
 import Login from './components/login/Login';
 import Register from './components/login/Register';
-<<<<<<< HEAD
 import Admin from './components/admin/Admin';
-=======
->>>>>>> d689d1f2a52dbf955f9fea358eba07b107690024
+
 
 function App() {
     const [searchValue, setSearchValue] = useState('');
@@ -115,15 +113,15 @@ function App() {
                 <Route path="/category/electronics" element={<Electronics />} />
                 <Route path="/category/register" element={<Register />} />
                 <Route path="/category/login" element={<Login />} />
-<<<<<<< HEAD
+
                 <Route path="/admin" element={<Admin />} />
             </Routes>
-         <Footer />
+       
          
-=======
-            </Routes>
+
+         
          <Footer />
->>>>>>> d689d1f2a52dbf955f9fea358eba07b107690024
+
         </div>
     );
 }
