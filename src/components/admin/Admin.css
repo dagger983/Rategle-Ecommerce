@@ -1,0 +1,35 @@
+.admin{
+    height:100vh;
+    background-color: white;
+    display: grid;
+    place-items: center;
+}
+
+
+.admin-form{
+    height:400px;
+    width:400px;
+    background-color: white;
+    border: 1px solid black;
+    position: relative;
+    bottom:80px;
+    padding:30px;
+}
+.admin-form input{
+    height:30px;
+    width:100%;
+    padding:10px;
+    margin-top:20px;
+}
+.admin-form select{
+    height:40px;
+    width:100%;
+    padding:10px;
+    margin-top:20px;
+}
+.admin-form button{
+    height:40px;
+    width:100%;
+    padding:10px;
+    margin-top:20px;
+}

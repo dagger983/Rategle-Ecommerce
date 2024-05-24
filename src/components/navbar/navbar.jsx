@@ -18,7 +18,7 @@ function Navbar({ onSearch }) {
         </Link>
         <SearchBar onSearch={onSearch} />
         <div className="navbar-icons">
-         <p onClick={pageReload}><span>Home</span><RiHomeSmileFill className='cart-icon'/></p>
+         <Link onClick={pageReload} style={{ textDecoration: 'none', color: 'inherit' }}><span>Home</span><RiHomeSmileFill className='cart-icon'/></Link>
           <Link to="/category/cart" className='cart'><span>Cart</span><IoCart className='cart-icon' /></Link>
           <Link to="/category/login" className='login'><span>Login</span><CgProfile className='login-icon' /></Link>
         </div>

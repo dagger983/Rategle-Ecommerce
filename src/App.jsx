@@ -17,6 +17,7 @@ import Fashion from './components/category/fashion/fashion';
 import Electronics from './components/category/electronics/electronics';
 import Login from './components/login/Login';
 import Register from './components/login/Register';
+import Admin from './components/admin/Admin';
 
 function App() {
     const [searchValue, setSearchValue] = useState('');
@@ -111,8 +112,10 @@ function App() {
                 <Route path="/category/electronics" element={<Electronics />} />
                 <Route path="/category/register" element={<Register />} />
                 <Route path="/category/login" element={<Login />} />
+                <Route path="/admin" element={<Admin />} />
             </Routes>
          <Footer />
+         
         </div>
     );
 }
