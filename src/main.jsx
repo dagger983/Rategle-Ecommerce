@@ -9,7 +9,11 @@ import { BrowserRouter } from 'react-router-dom';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
+<<<<<<< HEAD
   
+=======
+ 
+>>>>>>> d689d1f2a52dbf955f9fea358eba07b107690024
     <BrowserRouter>
       <App />
     </BrowserRouter>

@@ -1,8 +1,15 @@
 .login-container-main {
+<<<<<<< HEAD
   background-image: url("https://res.cloudinary.com/dvp17drdy/image/upload/v1716546079/18722664_v915-wit-002-d_i43az9.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   height: 100%;
+=======
+  background-image: url("https://res.cloudinary.com/dvp17drdy/image/upload/v1716067518/Downpic.cc-1479215167_tjdrxx.jpg");
+  background-size: cover;
+  height: 100vh;
+  
+>>>>>>> d689d1f2a52dbf955f9fea358eba07b107690024
 }
 
 .login-container {
@@ -12,6 +19,10 @@
   position: relative;
   bottom: 50px;
   height: 100vh;
+<<<<<<< HEAD
+=======
+
+>>>>>>> d689d1f2a52dbf955f9fea358eba07b107690024
 }
 
 .login-form {
@@ -24,6 +35,10 @@
   border: 1px solid rgba(209, 213, 219, 0.3);
   width: 300px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.35) 0px 5px 15px;
+<<<<<<< HEAD
+=======
+  /* Combine box-shadow properties */
+>>>>>>> d689d1f2a52dbf955f9fea358eba07b107690024
 }
 
 .login-form h2 {
@@ -62,6 +77,11 @@
   background-color: #0056b3;
 }
 
+<<<<<<< HEAD
+=======
+/* Password Toggle Icon */
+
+>>>>>>> d689d1f2a52dbf955f9fea358eba07b107690024
 .password-input-container {
   position: relative;
 }
@@ -78,12 +98,16 @@
 .password-toggle-icon:hover {
   color: #333;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> d689d1f2a52dbf955f9fea358eba07b107690024
 .create-account-option {
   text-align: center;
   margin-top: 20px;
   color: white;
 }
+<<<<<<< HEAD
 .password-visible {
   color: #2ecc71; /* or any other color you prefer */
 }
@@ -129,10 +153,15 @@
 
 
 @media screen and (max-width: 768px) {
+=======
+
+@media screen and (max-width:768px) {
+>>>>>>> d689d1f2a52dbf955f9fea358eba07b107690024
   .login-container {
     position: relative;
     bottom: 80px;
   }
+<<<<<<< HEAD
 
   .login-form {
     backdrop-filter: none;
@@ -140,3 +169,10 @@
     background-color: rgba(255, 255, 255, 0.17); /* Change to a less transparent color if needed */
   }
 }
+=======
+  .login-form {
+    color:white;
+  }
+
+}
+>>>>>>> d689d1f2a52dbf955f9fea358eba07b107690024

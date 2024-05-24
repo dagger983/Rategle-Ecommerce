@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+<<<<<<< HEAD
 import axios from 'axios';
 import Cookies from 'js-cookie';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
@@ -7,11 +8,17 @@ import { ClipLoader } from 'react-spinners';
 import './Login.css';
 
 const API_URL = 'https://rategle-login-register-db.onrender.com';
+=======
+import { FaEye, FaEyeSlash } from 'react-icons/fa'; // Import eye icons
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom for routing
+import './Login.css'; // Import your CSS file
+>>>>>>> d689d1f2a52dbf955f9fea358eba07b107690024
 
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
+<<<<<<< HEAD
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
 
@@ -34,6 +41,13 @@ const Login = () => {
       setError(error.response.data.message);
     }
     setLoading(false);
+=======
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Handle form submission logic here, like sending data to a server
+    console.log('Submitted:', { email, password });
+>>>>>>> d689d1f2a52dbf955f9fea358eba07b107690024
   };
 
   return (
@@ -41,7 +55,11 @@ const Login = () => {
       <div className="login-container">
         <form className="login-form" onSubmit={handleSubmit}>
           <h2>Login</h2>
+<<<<<<< HEAD
           <div className="form-group">
+=======
+          <div className="form-group" style={{color:"white"}}>
+>>>>>>> d689d1f2a52dbf955f9fea358eba07b107690024
             <label htmlFor="email">Email:</label>
             <input
               type="email"
@@ -51,7 +69,11 @@ const Login = () => {
               required
             />
           </div>
+<<<<<<< HEAD
           <div className="form-group">
+=======
+          <div className="form-group" style={{color:"white"}}>
+>>>>>>> d689d1f2a52dbf955f9fea358eba07b107690024
             <label htmlFor="password">Password:</label>
             <div className="password-input-container">
               <input
@@ -74,6 +96,7 @@ const Login = () => {
               )}
             </div>
           </div>
+<<<<<<< HEAD
           {error && <p className="error-message">{error}</p>}
           <button className='Login-btn' type="submit">Login</button>
           <p>Don't have an account? <Link to="/category/register" style={{ textDecoration: 'none', color: 'inherit' }}>Register here</Link>.</p>
@@ -84,6 +107,12 @@ const Login = () => {
           <ClipLoader color={'#123abc'} loading={loading} size={150} />
         </div>
       )}
+=======
+          <button className='Login-btn' type="submit">Login</button>
+          <p style={{color: "white",marginTop:"10px"}}>Don't have an account? <Link to="/category/register" style={{ textDecoration: 'none', color: 'inherit' }}>Create one</Link>.</p>
+        </form>
+      </div>
+>>>>>>> d689d1f2a52dbf955f9fea358eba07b107690024
     </div>
   );
 };
