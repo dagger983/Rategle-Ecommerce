@@ -1,8 +1,8 @@
 .login-container-main {
-  background-image: url("https://res.cloudinary.com/dvp17drdy/image/upload/v1716067518/Downpic.cc-1479215167_tjdrxx.jpg");
+  background-image: url("https://res.cloudinary.com/dvp17drdy/image/upload/v1716546079/18722664_v915-wit-002-d_i43az9.jpg");
   background-size: cover;
-  height: 100vh;
-  
+  background-repeat: no-repeat;
+  height: 100%;
 }
 
 .login-container {
@@ -12,7 +12,6 @@
   position: relative;
   bottom: 50px;
   height: 100vh;
-
 }
 
 .login-form {
@@ -25,7 +24,6 @@
   border: 1px solid rgba(209, 213, 219, 0.3);
   width: 300px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  /* Combine box-shadow properties */
 }
 
 .login-form h2 {
@@ -64,8 +62,6 @@
   background-color: #0056b3;
 }
 
-/* Password Toggle Icon */
-
 .password-input-container {
   position: relative;
 }
@@ -82,19 +78,65 @@
 .password-toggle-icon:hover {
   color: #333;
 }
+
 .create-account-option {
   text-align: center;
   margin-top: 20px;
   color: white;
 }
+.password-visible {
+  color: #2ecc71; /* or any other color you prefer */
+}
+/* Round rotating spinner styles */
+.spinner {
+  border: 8px solid rgba(0, 0, 0, 0.1);
+  border-top: 8px solid #123abc; /* Adjust color as needed */
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
-@media screen and (max-width:768px) {
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Loading overlay styles */
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin: 15px;
+  text-align: center;
+}
+
+
+@media screen and (max-width: 768px) {
   .login-container {
     position: relative;
     bottom: 80px;
   }
-  .login-form {
-    color:white;
-  }
 
+  .login-form {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    background-color: rgba(255, 255, 255, 0.17); /* Change to a less transparent color if needed */
+  }
 }

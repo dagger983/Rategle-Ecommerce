@@ -1,6 +1,12 @@
-import React, { useState } from 'react';
-import { FaEye, FaEyeSlash } from 'react-icons/fa'; // Import eye icons
-import './Login.css'; // Import your CSS file
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import Cookies from 'js-cookie';
+import { FaEye, FaEyeSlash } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
+import { ClipLoader } from 'react-spinners';
+import './Login.css';
+
+const API_URL = 'https://rategle-login-register-db.onrender.com';
 
 const Register = () => {
   const [email, setEmail] = useState('');
@@ -8,19 +14,40 @@ const Register = () => {
   const [confirmPassword, setConfirmPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+  const [error, setError] = useState('');
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission logic here, like sending data to a server
-    console.log('Submitted:', { email, password, confirmPassword });
+    setLoading(true);
+    try {
+      const response = await axios.post(`${API_URL}/register`, { email, password, confirmPassword });
+      console.log('Registration Successful:', response.data);
+      Cookies.set('jwt', response.data.token, { expires: 365 * 24 * 60 * 60 });
+      setSuccess(true);
+    } catch (error) {
+      console.error('Registration Failed:', error);
+      setError('Registration failed. Please try again.'); // Set a generic error message
+    }
+    setLoading(false);
   };
+
+  useEffect(() => {
+    if (success) {
+      setTimeout(() => {
+        window.alert('Registration successful! You will now be redirected to login.');
+        window.location.href = '/category/login';
+      }, 1000);
+    }
+  }, [success]);
 
   return (
     <div className='login-container-main'>
       <div className="login-container">
         <form className="login-form" onSubmit={handleSubmit}>
           <h2>Register</h2>
-          <div className="form-group" style={{color:"white"}}>
+          <div className="form-group">
             <label htmlFor="email">Email:</label>
             <input
               type="email"
@@ -30,7 +57,7 @@ const Register = () => {
               required
             />
           </div>
-          <div className="form-group" style={{color:"white"}}>
+          <div className="form-group">
             <label htmlFor="password">Password:</label>
             <div className="password-input-container">
               <input
@@ -53,7 +80,7 @@ const Register = () => {
               )}
             </div>
           </div>
-          <div className="form-group" style={{color:"white"}}>
+          <div className="form-group">
             <label htmlFor="confirmPassword">Confirm Password:</label>
             <div className="password-input-container">
               <input
@@ -76,9 +103,15 @@ const Register = () => {
               )}
             </div>
           </div>
+          {error && <p className="error-message">{error}</p>} {/* Display error message if registration fails */}
           <button className='Login-btn' type="submit">Register</button>
         </form>
       </div>
+      {loading && (
+        <div className="loading-overlay">
+          <ClipLoader color={'#123abc'} loading={loading} size={150} />
+        </div>
+      )}
     </div>
   );
 };

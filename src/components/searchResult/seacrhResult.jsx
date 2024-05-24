@@ -5,7 +5,8 @@ import TotalProductsList from '../../assets/TotalProductsList'; // Import the pr
 
 function SearchResult({ searchValue, sortType }) {
     // Convert searchValue to lowercase for case-insensitive comparison
-    const searchValueLower = searchValue.toLowerCase();
+
+    const searchValueLower = searchValue.split(" ").join("").toLowerCase();
 
     // Filter products based on searchValue
     let filteredProducts = TotalProductsList.filter(product =>
