@@ -5,7 +5,7 @@ const TotalProductsList = [
         "price": "₹ 104,999",
         "category": "Electronics",
         "imageUrl": "https://in-media.apjonlinecdn.com/catalog/product/cache/b3b166914d87ce343d4dc5ec5117b502/c/0/c08192495_6_1.png",
-        "description": "Experience immersive gaming with the HP Victus Gaming Laptop, Featuring a powerful Intel Core i7 processor, NVIDIA GeForce RTX graphics, 16GB DDR4 RAM and 512GB SSD storage, it delivers smooth performance and stunning graphics."
+        "description": "Experience immersive gaming with the HP Victus Gaming Laptop, Featuring a powerful Intel Core i7 processor, NVIDIA GeForce RTX 4060 graphics, 16GB DDR4 RAM and 512GB SSD storage, it delivers smooth performance and stunning graphics."
     },
     {
         "id": 2,

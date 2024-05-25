@@ -116,7 +116,7 @@ function App() {
 
                 {isAdminPage && <Route path="/admin" element={<Admin />} />}
             </Routes>
-             <Footer />
+            {!isAdminPage && <Footer />}
         </div>
     );
 }
