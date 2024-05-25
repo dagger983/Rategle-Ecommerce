@@ -19,7 +19,6 @@ import Login from './components/login/Login';
 import Register from './components/login/Register';
 import Admin from './components/admin/Admin';
 
-
 function App() {
     const [searchValue, setSearchValue] = useState('');
     const [selectedProduct, setSelectedProduct] = useState(null);
@@ -74,22 +73,23 @@ function App() {
     const isProductView = location.pathname.startsWith('/category');
     const isLoginPage = location.pathname === '/category/login';
     const isRegisterPage = location.pathname === '/category/register';
+    const isAdminPage = location.pathname.startsWith('/admin');
 
     return (
         <div>
-            {!isLoginPage && !isRegisterPage && !isProductView && <Navbar onSearch={handleSearch} />}
-            {!isLoginPage && !isRegisterPage && <Category />}
+            {!isAdminPage && !isLoginPage && !isRegisterPage && !isProductView && <Navbar onSearch={handleSearch} />}
+            {!isAdminPage && !isLoginPage && !isRegisterPage && <Category />}
             <Routes>
                 <Route path="/" element={
                     <>
-                        {!showSearchResultsComponent && !isLoginPage && !isRegisterPage && (
+                        {!showSearchResultsComponent && !isLoginPage && !isRegisterPage && !isAdminPage && (
                             <>
                                 <CarouselFlipkart />
                                 <BestDealsMobiles />
                                 <Banners />
                             </>
                         )}
-                        {showSearchResultsComponent && !isLoginPage && !isRegisterPage && (
+                        {showSearchResultsComponent && !isLoginPage && !isRegisterPage && !isAdminPage && (
                             <>
                                 <Filter onFilterChange={handleFilterChange} />
                                 <SearchResult
@@ -114,12 +114,13 @@ function App() {
                 <Route path="/category/register" element={<Register />} />
                 <Route path="/category/login" element={<Login />} />
 
-                <Route path="/admin" element={<Admin />} />
+                {isAdminPage && <Route path="/admin" element={<Admin />} />}
             </Routes>
-         <Footer />
-
+             <Footer />
         </div>
     );
 }
+
+
 
 export default App;
